@@ -1,0 +1,60 @@
+{
+	"url": "http://soft010-250:9090/sienge/resteasy/CPG/v1/automatizacao/bancaria/upload",
+	"token": "40",
+	"pagamento" : {
+		"paths": [
+			"cap/retornos/"
+		]
+	},
+	"cobranca" : {
+		"paths": [
+			"car/retornos/itau/13459-6",
+			"car/retornos/itau/ccisa07_18339-5",
+			"car/retornos/itau/alia_13860-5",
+			"car/retornos/itau/18492-2",
+			"car/retornos/itau/ccisa04_18659-6",
+			"car/retornos/itau/14225-0",
+			"car/retornos/itau/14264-9",
+			"car/retornos/itau/ccisa14_18645-5",
+			"car/retornos/itau/ccisa01_18341-1",
+			"car/retornos/itau/ccisa16_18647-1",
+			"car/retornos/itau/18660-4",
+			"car/retornos/itau/impfranca_14812-5",
+			"car/retornos/itau/ccisa02_15096-4",
+			"car/retornos/itau/23627-6",
+			"car/retornos/itau/acropole_04570-1",
+			"car/retornos/itau/autentico_04571-9",
+			"car/retornos/itau/novadelhi_06841-4",
+			"car/retornos/itau/provinc_05208-7",
+			"car/retornos/itau/portoesper_08283-7",
+			"car/retornos/itau/07009-7",
+			"car/retornos/itau/cedro_sp_07368-7",
+			"car/retornos/itau/capri_07628-4",
+			"car/retornos/itau/capri_09177-0",
+			"car/retornos/itau/horto_10854-1",
+			"car/retornos/itau/granvia_11091-9",
+			"car/retornos/itau/madasgascar_11791-4",
+			"car/retornos/itau/11789-8",
+			"car/retornos/itau/13203-8",
+			"car/retornos/itau/impromano_14311-8",
+			"car/retornos/itau/impocid_14263-1",
+			"car/retornos/itau/cedro_rj_19903-7",
+			"car/retornos/itau/ccisa10_21303-6",
+			"car/retornos/itau/ccisa09_21353-1",
+			"car/retornos/itau/10997-8",
+			"car/retornos/itau/10996-0",
+			"car/retornos/itau/saintsimon_12555-2",
+			"car/retornos/itau/mnr6emp_15786-0",
+			"car/retornos/itau/16895-8",
+			"car/retornos/itau/ccisa13_18650-5",
+			"car/retornos/itau/ccisa11_18667-9",
+			"car/retornos/itau/18644-8",
+			"car/retornos/itau/23624-3",
+			"car/retornos/itau/ccisa21_13488-5",
+			"car/retornos/itau/emmerin_29967-0"
+		]
+	},
+	"conciliacao" : {
+		"paths": []
+	}
+}

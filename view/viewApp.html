@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style type="text/css">
+            
+            body {
+               
+            }
+            ul li{
+                padding: 5px;
+                list-style: none;
+            }
+            ul li a{
+                text-decoration: underline;
+                color: blue;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            ul.filho{
+                display: none;
+            }
+        </style>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="10">
+
+    </head>
+
+    <body>  
+        <div id="cabecalho">
+            <h3>Histórico de processamento do dia</h3>
+        </div>
+        
+        <div id="conteudo-pagina">
+
+        </div>		
+    </body>
+    
+    <script>
+        
+        buscarHistorico(atualizarHistorico);
+
+        function atualizarHistorico(historico) {
+            conteudo=document.getElementById("conteudo-pagina");
+            ulP=document.createElement('ul');
+            ulP.classList.add('pai');
+            count=0;
+            historico['execucao'].forEach(function(arrayItem){
+
+                li=document.createElement('li');
+                a=document.createElement('a');
+                classF='filho'+count;
+                a.href="javascript: verDetalhes('"+classF+"')";
+                textoA=document.createTextNode("ver detalhes");
+                texto=document.createTextNode("Data da execução: "+arrayItem['data']);
+                ulF=document.createElement('ul');
+                ulF.classList.add('filho');
+                ulF.id=classF;
+
+                liStatus=document.createElement('li');
+                textoStatus=document.createTextNode("Status: "+arrayItem['status']);
+                liStatus.appendChild(textoStatus);
+
+                liMensagem=document.createElement('li');
+                textoMensagem=document.createTextNode("Mensagem: "+arrayItem['mensagem']);
+                liMensagem.appendChild(textoMensagem);
+
+                liTotalArquivos=document.createElement('li');
+                textoTotalArquivos=document.createTextNode("Qt. arquivos: "+arrayItem['totalArquivos']);
+                liTotalArquivos.appendChild(textoTotalArquivos);
+
+
+                ulF.appendChild(liStatus);
+                ulF.appendChild(liMensagem);
+                ulF.appendChild(liTotalArquivos);
+
+                a.appendChild(textoA);
+                li.appendChild(texto);
+                li.appendChild(a);
+                li.appendChild(ulF);
+                
+                ulP.appendChild(li);
+                count++;
+            });
+            conteudo.appendChild(ulP);            
+        }
+
+        function verDetalhes(tagA){
+            document.querySelectorAll('.filho').forEach(function(arrayItem){
+                arrayItem.style.display = 'none';
+            });
+            document.getElementById(tagA).style.display = 'block';     
+          
+        }
+
+    </script>
+
+</html>
