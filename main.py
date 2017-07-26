@@ -1,8 +1,8 @@
 import threading
 import time
 
-from sendFilesToSienge import Sender
-from sayHelloToSienge import sayHelloToSienge
+from sender import Sender
+from heartbeat import Heartbeat
 from server import initServer
 from viewApp import loadView
 
@@ -30,10 +30,10 @@ class Main:
 
 
 	def threadSayHelloToSienge(self):
-		self.tSayHelloToSienge = threading.Timer(1200, main.threadSayHelloToSienge)
+		self.tSayHelloToSienge = threading.Timer(3, main.threadSayHelloToSienge)
 		self.tSayHelloToSienge.daemon = True
 		self.tSayHelloToSienge.start() 
-		sayHelloToSienge()
+		Heartbeat().pulse()
 
 
 if __name__ == "__main__":

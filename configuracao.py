@@ -7,6 +7,7 @@ class Configuracao:
 
 	def __init__(self):
 		self.url = None
+		self.url_heartbeat = None
 		self.token = None
 		self.pagamento = self.Pagamento()
 		self.cobranca = self.Cobranca()

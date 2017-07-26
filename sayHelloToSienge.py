@@ -1,2 +1,0 @@
-def sayHelloToSienge():
-	print("sayHelloToSienge")
