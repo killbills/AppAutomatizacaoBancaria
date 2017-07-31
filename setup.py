@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='Integração Bancária Sienge',
@@ -10,7 +10,7 @@ setup(
     packages=['app'],
     include_package_data=True,
     install_requires=[
-        'cefpython',
+        'cefpython3==57.0',
         'requests',
         'jsonpickle'
     ],
