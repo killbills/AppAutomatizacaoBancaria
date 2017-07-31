@@ -1,5 +1,6 @@
 *.pyc
-logs/
-docs/historicoEnvio*
 .vscode/
+app/logs/
+app/__pycache__/
+docs/historicoEnvio*
 __pycache__/

@@ -1,7 +1,4 @@
-from cefpython3 import cefpython as cef
-from configuracao import Configuracao
-from historicoProcessamento import HistoricoProcessamento
-
+import app
 import os
 import sys
 import platform
@@ -10,6 +7,9 @@ import logging
 import base64
 import time
 
+from cefpython3 import cefpython as cef
+from app.configuracao import Configuracao
+from app.historicoProcessamento import HistoricoProcessamento
 
 WINDOWS = (platform.system() == "Windows")
 LINUX = (platform.system() == "Linux")
@@ -30,6 +30,7 @@ class Gui(object):
 def set_javascript_bindings(browser):
     bindings = cef.JavascriptBindings(bindToFrames=False, bindToPopups=False)
     bindings.SetFunction("buscarHistorico", buscarHistorico)
+    bindings.SetFunction("sairApp", sairApp)
     browser.SetJavascriptBindings(bindings)
 
 
@@ -69,6 +70,10 @@ def loadView():
     app.window()
 
     sys.exit()
+
+
+def sairApp(callback=None):
+    sys.exit(0)
 
 
 def check_versions():

@@ -1,5 +1,6 @@
 import os
 import json
+import app
 
 pathFileConfiguration = os.path.join(os.path.dirname(__file__), 'docs/configuracao.json')
 
@@ -9,6 +10,7 @@ class Configuracao:
 		self.url = None
 		self.url_heartbeat = None
 		self.token = None
+		self.path = None
 		self.pagamento = self.Pagamento()
 		self.cobranca = self.Cobranca()
 		self.conciliacao = self.Conciliacao()

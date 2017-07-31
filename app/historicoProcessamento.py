@@ -2,6 +2,7 @@ import os
 import json
 import jsonpickle
 import time
+import app
 
 from pathlib import Path
 
@@ -28,7 +29,6 @@ class HistoricoProcessamento:
         historicoFile = Path(caminhoArquivo)
         if not historicoFile.is_file():
             with open(caminhoArquivo, 'w') as f:
-                print('arquivo criado')
                 f.write(jsonpickle.encode(self.__dict__))
 
         with open(caminhoArquivo, 'r') as file:

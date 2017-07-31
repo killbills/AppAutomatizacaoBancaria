@@ -1,6 +1,8 @@
 import requests
 import logging
-from configuracao import Configuracao
+import app
+
+from app.configuracao import Configuracao
 
 class Heartbeat(object):
 

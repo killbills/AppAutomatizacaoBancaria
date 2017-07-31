@@ -1,16 +1,20 @@
 import zipfile
 import os
+import app
 
-from configuracao import Configuracao
+from app.configuracao import Configuracao
 
 class ZipFile(object):
 
 	def __init__(self):
 		self.fileZip = []
 		self.paths = []
+		self.configuracao = Configuracao()
+		self.configuracao.load()
 		
 
-	def zipdir(self, path, ziper):
+	def __zipdir(self, path, ziper):
+		os.chdir(self.configuracao.path)
 		for root, dirs, files in os.walk(path):
 			for file in files:
 				ziper.write(os.path.join(root, file))
@@ -21,17 +25,14 @@ class ZipFile(object):
 	def createZip(self, zipName):
 		ziper = zipfile.ZipFile(zipName, 'w', zipfile.ZIP_DEFLATED)
 		
-		configuracao = Configuracao()
-		configuracao.load()
-		
-		for path in configuracao.pagamento['paths']:
-			self.zipdir(path, ziper)
+		for path in self.configuracao.pagamento['paths']:
+			self.__zipdir(path, ziper)
 			
-		for path in configuracao.cobranca['paths']:
-			self.zipdir(path, ziper)
+		for path in self.configuracao.cobranca['paths']:
+			self.__zipdir(path, ziper)
 		
-		for path in configuracao.conciliacao['paths']:
-			self.zipdir(path, ziper)
+		for path in self.configuracao.conciliacao['paths']:
+			self.__zipdir(path, ziper)
 		
 		ziper.close()
 

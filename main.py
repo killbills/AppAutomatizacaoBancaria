@@ -1,10 +1,11 @@
 import threading
 import time
+import app
 
-from sender import Sender
-from heartbeat import Heartbeat
-from server import initServer
-from viewApp import loadView
+from app.sender import Sender
+from app.heartbeat import Heartbeat
+from app.server import initServer
+from app.viewApp import loadView
 
 
 class Main:

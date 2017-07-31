@@ -3,10 +3,11 @@ import time
 import os
 import shutil
 import logging
+import app
 
-from configuracao import Configuracao
-from zipFiles import ZipFile
-from historicoProcessamento import HistoricoProcessamento
+from app.configuracao import Configuracao
+from app.zipFiles import ZipFile
+from app.historicoProcessamento import HistoricoProcessamento
 
 class Sender(object):
 
@@ -18,7 +19,7 @@ class Sender(object):
 
 
 	def sendFilesToSienge(self):
-		zipName = "arquivosAutomatizacaoBancaria.zip"
+		zipName = os.path.join(os.path.dirname(__file__), "arquivosAutomatizacaoBancaria.zip")
 
 		self.ziper.createZip(zipName)
 
@@ -82,16 +83,18 @@ class Sender(object):
 
 
 	def moveFiles(self):
+		os.chdir(self.configuracao.path)
+		logging.info('Movendo arquivos...')
+		pathEnvio = os.path.join(self.configuracao.path, "envio")
+		os.makedirs(pathEnvio, 0o777, True)
+		
 		for source in self.ziper.getPaths():
-			
-			dest = os.path.join("Processados", source)
-			logging.info(' Movendo arquivos...')
-			localPath = dest.rsplit('\\', 1)[0]
+			dest = os.path.join("envio", source)
+			localPath = dest.rsplit('/', 1)[0]
 			os.makedirs(localPath, 0o777, True)
 			
 			if os.path.isfile(dest):
 				os.chmod(dest, 0o777)
 				os.remove(dest)
-				
 			
 			shutil.move(source, dest)	

@@ -2,6 +2,7 @@
 	"url": "http://soft010-248:9090/sienge/resteasy/CPG/v1/automatizacao/bancaria/upload",
 	"url_heartbeat" : "http://soft010-248:9090/sienge/resteasy/CPG/v1/automatizacao/bancaria/heartbeat",
 	"token": "40",
+	"path": "D:/Teste",
 	"pagamento" : {
 		"paths": [
 			"cap/retornos/"

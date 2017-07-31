@@ -1,6 +1,7 @@
 import logging
 import time
 import os
+import app
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
@@ -16,6 +17,7 @@ class Server(BaseHTTPRequestHandler):
 
 
 def initServer():
+	os.makedirs(os.path.join(os.path.dirname(__file__), 'logs'), 0o777, True)
 	path=os.path.join(os.path.dirname(__file__), 'logs\\console.log')
 	logging.basicConfig(filename=path, level=logging.INFO)
 	logging.info(' Starting service - ' + time.strftime('%c'))
