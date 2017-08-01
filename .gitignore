@@ -2,5 +2,5 @@
 .vscode/
 app/logs/
 app/__pycache__/
-docs/historicoEnvio*
+app/docs/historicoEnvio*
 __pycache__/

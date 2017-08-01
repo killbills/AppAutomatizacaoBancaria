@@ -30,7 +30,7 @@ class Sender(object):
 		try:
 			response = requests.post(self.configuracao.url, headers = header, timeout = 60, data = zipFile)
 		except Exception as e:
-			logging.error(' Não foi possível conectar ao servidor')
+			logging.error(' Nao foi possivel conectar ao servidor')
 
 
 		statusCode = self.createHistoricoProcessamento(response)
@@ -61,7 +61,7 @@ class Sender(object):
 				execucao.mensagem = "Token nao autorizado"
 
 		else:
-			execucao.mensagem = "Não foi possível conectar ao servidor"
+			execucao.mensagem = "Nao foi possivel conectar ao servidor"
 			execucao.status = ""
 			
 		
