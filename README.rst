@@ -20,7 +20,7 @@ jsonpickle
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
-   pip install -r requirements.txt
+   >> pip install -r requirements.txt
 
 
 Para configurar o aplicativo, edite o arquivo /app/docs/configuracao.json conforme o exemplo
@@ -62,5 +62,9 @@ Execução
 
 Após a instalação do python e das dependencias, e de editar o arquivo de configuração, executar o arquivo:
 
-app.bat
+Windows: app.bat
 ^^^^^^^^
+
+Linux/macOS/Windows::
+^^^^^^^^
+   >> python main.py
