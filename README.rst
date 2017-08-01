@@ -65,9 +65,12 @@ Após a instalação do python e das dependencias, e de editar o arquivo de conf
 Windows
 ^^^^^^^^
 ::
+
    executar app.bat
+
 
 Linux/macOS/Windows
 ^^^^^^^^
 ::
+
    >> python main.py
