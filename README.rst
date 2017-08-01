@@ -62,9 +62,12 @@ Execução
 
 Após a instalação do python e das dependencias, e de editar o arquivo de configuração, executar o arquivo:
 
-Windows: app.bat
+Windows
 ^^^^^^^^
+::
+   executar app.bat
 
-Linux/macOS/Windows::
+Linux/macOS/Windows
 ^^^^^^^^
+::
    >> python main.py
