@@ -20,7 +20,7 @@ jsonpickle
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
-   pip install -r dependencies.txt
+   pip install -r requirements.txt
 
 
 Para configurar o aplicativo, edite o arquivo /app/docs/configuracao.json conforme o exemplo
