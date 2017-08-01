@@ -1,0 +1,3 @@
+requests
+cefpython3
+jsonpickle
