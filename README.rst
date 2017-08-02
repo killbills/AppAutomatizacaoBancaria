@@ -10,13 +10,11 @@ Python 3.6
 
 Dependências
 -------
+::
 
-cefpython3
-^^^^^^^^
-requests
-^^^^^^^^
-jsonpickle
-^^^^^^^^
+   cefpython3
+   requests
+   jsonpickle
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
