@@ -21,6 +21,7 @@ Dependências
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
+
    >> pip install -r requirements.txt
 
 
@@ -34,6 +35,9 @@ Para configurar o aplicativo, edite o arquivo /app/docs/configuracao.json confor
       "url": "http://<url-sienge>/resteasy/CPG/v1/automatizacao/bancaria/upload",
       "url_heartbeat" : "http://<url-sienge>/resteasy/CPG/v1/automatizacao/bancaria/heartbeat",
       "token": "token de validação de acesso ao sienge",
+	  "startHour": "20 - Hora que a tarefa deve iniciar o envio de arquivos - Inicia as 20:00:00",
+	  "endHour": "6 - Hora em que a tarefa deve parar de enviar os arquivos - Encerra as 06:59:59",
+	  "interval": "360 - Intervalo em segundos para execução da tarefa. - A cada 60 minutos envia os arquivos",
       "path": "D:/Teste - diretório raiz onde se encontram os arquivos", 
       "pagamento" : 
       {

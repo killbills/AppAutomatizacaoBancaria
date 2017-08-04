@@ -3,7 +3,11 @@
 	"url_heartbeat" : "http://<url-sienge>/resteasy/CPG/v1/automatizacao/bancaria/heartbeat",
 	"token": "",
 	"path": "",
+	"startHour":"",
+	"endHour":"",
+	"interval":"",
 	"pagamento" : {"paths": []},
 	"cobranca" : {"paths": []},
 	"conciliacao" : {"paths": []}
 }
+

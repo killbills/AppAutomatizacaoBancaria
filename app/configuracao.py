@@ -11,6 +11,9 @@ class Configuracao:
 		self.url_heartbeat = None
 		self.token = None
 		self.path = None
+		self.startHour = None
+		self.endHour = None
+		self.interval = None
 		self.pagamento = self.Pagamento()
 		self.cobranca = self.Cobranca()
 		self.conciliacao = self.Conciliacao()
