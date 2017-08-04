@@ -1,3 +1,6 @@
+Integração Automatização Bancária Sienge
+-------
+
 Aplicativo para integração com o serviço de automatização bancária do Sienge.
 
 O aplicativo cria um zip com os arquivos de retornos do Pagamento e Cobrança Escritural e da Conciliação Bancária e os envia para serem processados pelo Sienge.
@@ -10,17 +13,16 @@ Python 3.6
 
 Dependências
 -------
+::
 
-cefpython3
-^^^^^^^^
-requests
-^^^^^^^^
-jsonpickle
-^^^^^^^^
+   cefpython3
+   requests
+   jsonpickle
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
-   pip install -r requirements.txt
+
+   >> pip install -r requirements.txt
 
 
 Para configurar o aplicativo, edite o arquivo /app/docs/configuracao.json conforme o exemplo
@@ -62,5 +64,15 @@ Execução
 
 Após a instalação do python e das dependencias, e de editar o arquivo de configuração, executar o arquivo:
 
-app.bat
+Windows
 ^^^^^^^^
+::
+
+   executar app.bat
+
+
+Linux/macOS/Windows
+^^^^^^^^
+::
+
+   >> python main.py
