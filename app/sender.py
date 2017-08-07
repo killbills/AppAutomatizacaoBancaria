@@ -90,7 +90,7 @@ class Sender(object):
 		
 		for source in self.ziper.getPaths():
 			dest = os.path.join("envio", source)
-			localPath = dest.rsplit('/', 1)[0]
+			localPath = dest.rsplit('\\', 1)[0]
 			os.makedirs(localPath, 0o777, True)
 			
 			if os.path.isfile(dest):

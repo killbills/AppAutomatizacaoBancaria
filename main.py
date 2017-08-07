@@ -42,8 +42,8 @@ class Main:
 
 	def shouldSendFiles(self):
 		now = datetime.datetime.now()
-		startTime = now.replace(hour=int(self.configuracao.startTime), minute=0, second=0)
-		endTime = now.replace(hour=int(self.configuracao.endTime), minute=59, second=59)
+		startTime = now.replace(hour=int(self.configuracao.startHour), minute=0, second=0)
+		endTime = now.replace(hour=int(self.configuracao.endHour), minute=59, second=59)
 
 		if startTime.time() > endTime.time():
 			endTime += datetime.timedelta(days=1)
