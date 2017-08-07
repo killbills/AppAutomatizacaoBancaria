@@ -18,6 +18,7 @@ Dependências
    cefpython3
    requests
    jsonpickle
+   python-dateutil
 
 Para instalar as dependencias do aplicativo, execute o comando na pasta em que o aplicativo for descompactado::
 
