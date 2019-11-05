@@ -32,7 +32,7 @@ class HistoricoProcessamento:
                 f.write(jsonpickle.encode(self.__dict__))
 
         with open(caminhoArquivo, 'r') as file:
-            self.__dict__ = jsonpickle.decode(file.read())            
+            self.__dict__ = json.load(file)
 
 
     def salvar(self):            

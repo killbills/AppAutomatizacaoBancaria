@@ -22,9 +22,8 @@
             }
         </style>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="10">
-
+        <meta charset="UTF-8">        
+        <script type="text/javascript" src="jquery.min.js"></script>
     </head>
 
     <body>  
@@ -39,10 +38,17 @@
     
     <script>
         
+        setInterval(function(){
+            buscarHistorico(atualizarHistorico);
+        }, 10000);
+
         buscarHistorico(atualizarHistorico);
 
         function atualizarHistorico(historico) {
+            
+            
             conteudo=document.getElementById("conteudo-pagina");
+            conteudo.innerHTML = "";
             ulP=document.createElement('ul');
             ulP.classList.add('pai');
             count=0;
@@ -94,9 +100,7 @@
           
         }
 
-        $(window).on("beforeunload", function() { 
-            sairApp();
-        });
+       
 
     </script>
 
