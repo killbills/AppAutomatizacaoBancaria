@@ -1,13 +1,23 @@
 {
-	"url": "http://<url-sienge>/resteasy/CPG/v1/automatizacao/bancaria/upload",
-	"url_heartbeat" : "http://<url-sienge>/resteasy/CPG/v1/automatizacao/bancaria/heartbeat",
-	"token": "",
-	"path": "",
-	"startHour":"",
-	"endHour":"",
-	"interval":"",
-	"pagamento" : {"paths": []},
-	"cobranca" : {"paths": []},
-	"conciliacao" : {"paths": []}
+   "url":"http://localhost:9090/sienge/resteasy/CPG/v1/automatizacao/bancaria/upload",
+   "url_heartbeat":"http://localhost:9090/sienge/resteasy/CPG/v1/automatizacao/bancaria/heartbeat",
+   "token":"NDU2NA==",
+   "startHour":"02",
+   "endHour":"20",
+   "interval":"60",
+   "path":"/home/fbs/development/fontes/AppAutomatizacaoBancaria/",
+   "pagamento":{
+      "paths":[
+         "automatizacao_arquivos/pagamento_escritural_cef/",
+         "automatizacao_arquivos/pagamento_escritural_itau/"
+      ]
+   },
+   "cobranca":{
+      "paths":[
+         "automatizacao_arquivos/cobranca_escritural/ITAU400R/"
+      ]
+   },
+   "conciliacao":{
+      "paths":[]
+   }
 }
-
